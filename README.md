@@ -1,1 +1,2 @@
-# DetailTableView
+## DetailTableView
+一个可以展开详细信息的tableview 消除了reloadData时候的跳动问题
