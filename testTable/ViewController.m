@@ -29,6 +29,7 @@
     self.indexTable.estimatedRowHeight = 0;
     self.indexTable.estimatedSectionHeaderHeight = 0;
     self.indexTable.estimatedSectionFooterHeight = 0;
+    
     for (int i = 0; i <88; i++)
     {
         [stateArray addObject:@"0"];
@@ -44,6 +45,7 @@
         [tableView registerNib:_nib forCellReuseIdentifier:@"DemoCell"];
     }
     DemoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DemoCell" forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
 //    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
     cell.label.text = [NSString stringWithFormat:@"这是第%ld行",(long)indexPath.row];
     cell.detail.text = [NSString stringWithFormat:@"这是第%ld行细节部分",(long)indexPath.row];
@@ -88,6 +90,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end
